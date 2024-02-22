@@ -31,16 +31,17 @@
                                         alt="image"></td>
                                 <td>
                                     <div class="d-flex gap-2">
-                                    <a href="{{ route('admin.products.edit', $product->id) }}"
-                                        class="btn btn-primary">Data Update</a>
-                                    <form action="{{ route('admin.products.destroy', $product->id) }}"
-                                         method="POST" onsubmit="return confirm('Are You Sure?')">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">
-                                            Delete
-                                        </button>
-                                    </form>
+                                        <a href="{{ route('admin.products.edit', $product->id) }}"
+                                            class="btn btn-primary">Data Update</a>
+                                        <a href="{{ route('admin.products.show', $product->id) }}" class="btn btn-info">Show</a>
+                                        <form action="{{ route('admin.products.destroy', $product->id) }}"
+                                            method="POST" onsubmit="return confirm('Are You Sure?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">
+                                                Delete
+                                            </button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>

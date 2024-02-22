@@ -44,7 +44,7 @@ class ProductController extends Controller
     public function show(Product $product): View
     {
 
-        return view('admin.product.show',['products'=>$product]);
+        return view('admin.product.show',['product'=>$product]);
     }
 
 

@@ -10,13 +10,24 @@
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-primary">
-                    <thead>
+                    <tbody>
                         <tr>
-                            <th scope="col">ID</th>
-                            <td></td>
+                            <th>ID</th>
+                            <td>{{ $product->id }}</td>
                         </tr>
-                    </thead>
-
+                        <tr>
+                            <th>Name</th>
+                            <td>{{ $product->name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                            <td>{{ $product->description }}</td>
+                        </tr>
+                        <tr>
+                            <th>Image</th>
+                            <td><img src="{{ Storage::url($product->image) }}" height="100" width="100"></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
