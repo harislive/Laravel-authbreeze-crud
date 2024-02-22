@@ -40,17 +40,14 @@ class ProductController extends Controller
         return to_route('admin.products.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Product $product): View
     {
+
         return view('admin.product.show',['products'=>$product]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(Product $product):View
     {
         return view('admin.product.update',[
@@ -58,9 +55,7 @@ class ProductController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(ProductRequest $request, Product $product): RedirectResponse
     {
         $product->update($request->safe()->except('image'));
@@ -72,9 +67,7 @@ class ProductController extends Controller
         return to_route('admin.products.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(Product $product): RedirectResponse
     {
         $product->delete();
